@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Market Research Survey</title>
+    <link rel="stylesheet" type="text/css" href="tao-form-revew.css">
+    <style>
+        table, td, th {
+            border: 1px solid black;
+            text-align: center;}
+        tr:nth-child(odd) {
+            background-color: #dddddd;
+        }
+    </style>
+</head>
+<body class="form">
+<h3>Market Research Survey</h3>
+<p>
+    Please take a few moments to complete this satisfaction survey.
+</p>
+<form>
+    <b>what is your age range?</b><br>
+    <select style="width: 800px">
+        <option value="18-24">18-24</option>
+        <option value="25-34">25-34</option>
+        <option value="35-50">35-50</option>
+        <option value="50+">50+</option>
+    </select>
+       <br>
+       <br>
+    <b>what is your yearly income range?</b><br>
+    <select style="width: 800px">
+        <option value="$0-$25,000">$0-$25,000</option>
+        <option value="$25,001-$50,000">$25,001-$50,000</option>
+        <option value="$50,001-$100,000">$50,001-$100,000</option>
+        <option value="+$100,000">+$100,000</option>
+    </select><br>
+             <br>
+    <b>Gender Indentity</b><br>
+    <input type="radio" name="gender" value="male"> Male<br>
+    <input type="radio" name="gender" value="female"> Female<br>
+    <input type="radio" name="gender" value="nonbinari"> Nonbinari<br>
+    <input type="radio" name="gender" value="other"> Other<br>
+    <pre>    <input type="text" ><br></pre>
+                                 <br>
+    <b>Which of the following products have your purchased in the last 2 months. Please check all that apply.</b><br>
+    <input type="checkbox" name="vehicle1" value="product-1"> Product 1<br>
+    <input type="checkbox" name="vehicle2" value="product-2"> Product 2<br>
+    <input type="checkbox" name="vehicle3" value="product-3"> Product 3
+    <br>
+    <br>
+    <b>How often would you use our new product?</b><br>
+    <input type="radio" name="gender1" value="daly"> Daly<br>
+    <input type="radio" name="gender1" value="weekly"> Weekly<br>
+    <input type="radio" name="gender1" value="monthly"> Monthly
+    <br>
+    <br>
+    <b>What would you pay for the new product?</b><br>
+    <b>$</b><input type="text"> <b>.</b> <input type="text" style="width: 1%">
+    <br>
+    <br>
+    <b>What features would you like to see in the new product.</b><br>
+       <textarea style="width: 800px; height: 200px"></textarea>
+    <br>
+    <br>
+    <b>Please rate your level of agreement with the following statesments</b>
+    <table>
+        <tr>
+            <th></th>
+            <th>Strongly Disagree</th>
+            <th>Disagree</th>
+            <th>Agree</th>
+            <th>Strongly Agree</th>
+        </tr>
+        <tr>
+            <th>Our product are priced fairly</th>
+            <td><input type="radio"><p>1</p></td>
+            <td><input type="radio"><p>2</p></td>
+            <td><input type="radio"><p>3</p></td>
+            <td><input type="radio"><p>4</p></td>
+        </tr>
+        <tr>
+            <th>Our product are high quality</th>
+            <td><input type="radio"><p>1</p></td>
+            <td><input type="radio"><p>2</p></td>
+            <td><input type="radio"><p>3</p></td>
+            <td><input type="radio"><p>4</p></td>
+        </tr>
+        <tr>
+            <th>You wouuld recommend our product to a friend or coworker</th>
+            <td><input type="radio"><p>1</p></td>
+            <td><input type="radio"><p>2</p></td>
+            <td><input type="radio"><p>3</p></td>
+            <td><input type="radio"><p>4</p></td>
+        </tr>
+    </table>
+    <br>
+    <br>
+    <input type="submit" value="submit" style="width: 90px"; height="70px">
+</form>
+</body>
+</html>
