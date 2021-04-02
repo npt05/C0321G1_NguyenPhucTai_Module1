@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi tiền tệ</title>
+</head>
+<body>
+<pre>        <b>Amount</b>               <b>From Curency</b>     <b>To Currency</b></pre>
+<pre><input type="text" id="num">      <select id="t1"><option value="VietNam">VietNam</option><option value="USD">USD</option></select>       <select id="t2"><option value="USD">USD</option><option value="VietNam">VietNam</option></select>  <button type="button" onclick="exchange()" style="background-color:blue">Convert</button>
+</pre>
+      <label id="inra"></label>
+      <script>
+          function exchange() {
+              let kq;
+              let money=document.getElementById("num").value;;
+              let t1=document.getElementById("t1").value;
+              let t2=document.getElementById("t2").value;
+              if(t1=="VietNam" && t2=="USD"){
+                  kq=money/23000;
+              }
+              else if(t1=="USD" && t2=="VietNam"){
+                  kq=monney*23000;
+              }
+              else {
+                  kq=money;
+              }
+              document.getElementById("inra").innerText="Reslut =" +kq;
+          }
+      </script>
+</body>
+</html>

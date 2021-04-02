@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng máy tính</title>
+</head>
+<body>
+<pre><input type="text" id="num1">   <input type="text" id="num2"></pre>
+    <button type="button" onclick="exchange1()">Addition(+)</button>
+    <button type="button" onclick="exchange2()">Subtraction(-)</button>
+    <button type="button" onclick="exchange3()">Multiplication(*)</button>
+    <button type="button" onclick="exchange4()">Division(/)</button>
+    <br>
+<label id="inra"></label>
+<script>
+    function exchange1(){
+       let inputnum1=document.getElementById("num1").value;
+       let inputnum2=document.getElementById("num2").value;
+       let a=parseInt(inputnum1);
+       let b=parseInt(inputnum2);
+        document.getElementById("inra").innerText="Result Division:" +(a+b);
+    }
+       function exchange2() {
+           let inputnum1=document.getElementById("num1").value;
+           let inputnum2=document.getElementById("num2").value;
+           let a=parseInt(inputnum1);
+           let b=parseInt(inputnum2);
+           document.getElementById("inra").innerText="Result Division:" +(a-b);
+       }
+       function exchange3() {
+           let inputnum1=document.getElementById("num1").value;
+           let inputnum2=document.getElementById("num2").value;
+           let a=parseInt(inputnum1);
+           let b=parseInt(inputnum2);
+           document.getElementById("inra").innerText="Result Division:" +(a*b);
+       }
+       function exchange4() {
+           let inputnum1=document.getElementById("num1").value;
+           let inputnum2=document.getElementById("num2").value;
+           let a=parseInt(inputnum1);
+           let b=parseInt(inputnum2);
+           document.getElementById("inra").innerText="Result Division:" +(a/b);
+       }
+</script>
+</body>
+</html>
