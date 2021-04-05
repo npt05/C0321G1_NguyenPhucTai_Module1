@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập câu điều kiện</title>
+</head>
+<body>
+     <script>
+         let a=parseInt(prompt("Nhập vào hệ số a: "));
+         let b=parseInt(prompt("Nhập vào hệ số b: "));
+         let c=parseInt(prompt("Nhập vào hệ số c: "));
+         let x,x1,x2,delta;
+         if(a == 0){
+             if(b == 0) {
+                 if (c == 0) {
+                     alert("Phương trình vô số nghiệm.");
+                 } else {
+                     alert("Phương trình vô nghiệm.");
+                 }
+             }else{
+                 x = -c/b;
+                 alert("Nghiệm của phương trình là: " +x);
+             }
+         }else{
+               delta = b*b -4*a*c;
+               if(delta > 0){
+                   x1 = (-b+Math.sqrt(delta))/(2*a);
+                   x2 = (-b-Math.sqrt(delta))/(2*a);
+               alert("Phương trình có 2 nghiệm phân biệt là: x1= " +x1+ " và x2= " +x2);
+               }else if(delta == 0){
+                   x = -b/(2*a);
+                   alert("Phương trình có nghiệm kép x1 = x2 = " +x);
+               }else {
+             alert("Phương trình vô nghiệm.");
+               }
+         }
+     </script>
+</body>
+</html>

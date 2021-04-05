@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập cấu trúc điều kiện</title>
+</head>
+<body>
+     <script>
+         let p=parseInt(prompt("Nhập số tiền bạn gửi ngân hàng: "));
+         let r=parseFloat(prompt("Cho biết lãi suất hàng tháng ngân hàng bạn gửi( điền số thôi bạn nhé): "));
+         let t=parseInt(prompt("Cho biết thời gian bạn gửi ngân hàng ( bao nhiêu tháng): "));
+         let lai;
+         if(p<=0){
+             alert("Không gửi tiền lấy đâu lãi hả bạn :).");
+         }else if(r<=0){
+             alert("Không có lãi gửi làm gì bạn ơi.");
+         }else if(t<=0){
+             alert("Cho ngân hàng vay mới có lãi bạn ơi.");
+         }else {
+             lai = p * (( 1 + r)**(t)) - p ;
+             alert("Số tiền lãi bạn nhận được là: " +lai);
+         }
+     </script>
+</body>
+</html>

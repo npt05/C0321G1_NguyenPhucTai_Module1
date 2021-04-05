@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập cấu trúc điều kiện</title>
+</head>
+<body>
+<script>
+    let thunhapcanhan=parseInt(prompt("Cho biết thu nhập cá nhân hàng tháng của bạn (triệu đồng) :"));
+    let tienthue;
+    if( thunhapcanhan >= 80 ){
+        tienthue = ( thunhapcanhan * 35 ) / 100;
+        alert("Số tiền thuế bạn phải nộp là: "+tienthue+  "triệu đồng");
+    }else if( thunhapcanhan >= 52 ){
+        tienthue = ( thunhapcanhan * 30 ) / 100;
+        alert("Số tiền thuế bạn phải nộp là: "+tienthue+  "triệu đồng");
+    }else if( thunhapcanhan >= 32 ){
+        tienthue = ( thunhapcanhan * 25 ) / 100;
+        alert("Số tiền thuế bạn phải nộp là: "+tienthue+  "triệu đồng");
+    }else if( thunhapcanhan >= 18 ){
+        tienthue = ( thunhapcanhan * 20 ) / 100;
+        alert("Số tiền thuế bạn phải nộp là: "+tienthue+  "triệu đồng");
+    }else if( thunhapcanhan >= 10 ){
+        tienthue = ( thunhapcanhan *   15 ) / 100;
+        alert("Số tiền thuế bạn phải nộp là: "+tienthue+  "triệu đồng");
+    }else if( thunhapcanhan >= 5 ){
+        tienthue = ( thunhapcanhan *   10 ) / 100;
+        alert("Số tiền thuế bạn phải nộp là: "+tienthue+  "triệu đồng");
+    }else if( thunhapcanhan > 0 ){
+        tienthue = ( thunhapcanhan *   5 ) / 100;
+        alert("Số tiền thuế bạn phải nộp là: "+tienthue+  "triệu đồng");
+    }else {
+        alert("Đi nhận tiền thất nghiệp đi bạn ơi kkk.");
+    }
+</script>
+</body>
+</html>
