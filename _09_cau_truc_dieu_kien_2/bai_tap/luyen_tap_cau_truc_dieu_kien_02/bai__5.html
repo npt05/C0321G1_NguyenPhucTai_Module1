@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập cấu trúc điều kiện</title>
+</head>
+<body>
+<script>
+    let a=parseFloat(prompt("Nhập cạnh kề a: "));
+    let b=parseFloat(prompt("Nhập cạnh kề b: "));
+    let dientich;
+    if(a>0 && b>0){
+        dientich = a*b/2;
+        alert("Diện tích tam giác vuông có 2 cạnh kề " +a+ " và " +b+ " là " +dientich);
+
+    }else if(a==0 || b==0){
+        alert("Hình không phải hình tam giác vuông.");
+    }else {
+        alert("Bạn tự tính nha -.-");
+    }
+</script>
+</body>
+</html>

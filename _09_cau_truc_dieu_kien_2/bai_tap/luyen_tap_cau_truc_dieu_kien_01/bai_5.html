@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập cấu trúc điều kiện</title>
+</head>
+<body>
+     <script>
+         let diemkietra=parseFloat(prompt("Nhập điểm bài kiểm tra: "));
+         let diemgiuaki=parseFloat(prompt("Nhập điểm thi giữa kì: "));
+         let diemcuoiki=parseFloat(prompt("Nhập điểm thi cuối kì: "));
+         let diemtongket=((diemkietra*7 + diemgiuaki*3)/10 + diemcuoiki)/2;
+         if(diemtongket>=9) {
+             alert("Học lực xuất  sắc");
+         }else if(diemtongket>=8) {
+                 alert("Học lực giỏi");
+             }else if (diemtongket >= 6.5) {
+                     alert("Học lực khá");
+                 } else if (diemtongket >= 5) {
+                         alert("Học lực trung bình");
+                     } else {
+                         alert("Học lực yếu ");
+                     }
+     </script>
+</body>
+</html>

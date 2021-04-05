@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập cấu trúc điều kiện</title>
+</head>
+<body>
+      <script>
+          let a=parseInt(prompt("Nhập hệ số a: "));
+          let b=parseInt(prompt("Nhập hệ số b: "));
+          let x;
+          if(a==0){
+              if(b===0){
+                  alert("Phương trình vô số nghiệm.");
+              }else {
+                  alert("Phương trình vô nghiệm.");
+              }
+          }else {
+              x = -b/a;
+              alert("Nghiệm của phương trình là: " +x);
+          }
+      </script>
+</body>
+</html>

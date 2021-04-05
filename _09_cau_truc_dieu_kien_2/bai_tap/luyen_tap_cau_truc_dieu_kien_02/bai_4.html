@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập cấu trúc điều kiện</title>
+</head>
+<body>
+     <script>
+         let a=parseFloat(prompt("Nhập cạnh a: "));
+         let b=parseFloat(prompt("Nhập cạnh b: "));
+         let dientich;
+         if(a>0 && b>0){
+             dientich = a*b;
+             alert("Diện tích hình chữ nhật cạnh " +a+ " và " +b+ " là " +dientich);
+
+         }else if(a==0 || b==0){
+             alert("Hình là 1 đường thẳng không phải hình chữ nhật.");
+         }else {
+             alert("2 cạnh bằng 0 thì tính gì nữa :)");
+         }
+     </script>
+</body>
+</html>

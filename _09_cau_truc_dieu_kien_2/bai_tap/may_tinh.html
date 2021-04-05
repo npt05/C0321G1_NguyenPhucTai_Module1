@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Máy tính đơn giản</title>
+    <style>
+        td{
+            size: 40px;
+        }
+    </style>
+</head>
+<body>
+     <form>
+     <table  border="1px" align="center" style="color: blue">
+         <tr>
+             <td style="height: 20px" colspan="4">
+                 <input  type="text" id="ketqua" value="">
+             </td>
+         </tr>
+         <tr align="center">
+             <td><input type="button" value="1" onclick="tinhtoan(this.value);"></td>
+             <td><input type="button" value="2" onclick="tinhtoan(this.value);"></td>
+             <td><input type="button" value="3" onclick="tinhtoan(this.value);"></td>
+             <td><input type="button" value="+" onclick="tinhtoan(this.value);"></td>
+         </tr>
+         <tr align="center">
+             <td><input type="button" value="4" onclick="tinhtoan(this.value);"></td>
+             <td><input type="button" value="5" onclick="tinhtoan(this.value);"></td>
+             <td><input type="button" value="6" onclick="tinhtoan(this.value);"></td>
+             <td><input type="button" value="-" onclick="tinhtoan(this.value);"></td>
+         </tr>
+         <tr align="center">
+             <td><input type="button" value="7" onclick="tinhtoan(this.value);"></td>
+             <td><input type="button" value="8" onclick="tinhtoan(this.value);"></td>
+             <td><input type="button" value="9" onclick="tinhtoan(this.value);"></td>
+             <td><input type="button" value="x" onclick="tinhtoan(this.value);"></td>
+         </tr>
+         <tr align="center">
+             <td><input type="reset"  value="C" onclick="tinhtoan(this.value);"></td>
+             <td><input type="button" value="0" onclick="tinhtoan(this.value);"></td>
+             <td><input type="button" value="=" onclick="bang();"></td>
+             <td><input type="button" value="/" onclick="tinhtoan(this.value);"></td>
+         </tr>
+     </table>
+     </form>
+     <script>
+         function tinhtoan(value) {
+             document.getElementById('ketqua').value+=(value);
+         }
+         function bang() {
+             document.getElementById('ketqua').value=eval(document.getElementById('ketqua').value);
+         }
+     </script>
+</body>
+</html>
