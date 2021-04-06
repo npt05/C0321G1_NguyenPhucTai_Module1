@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a=0;
+    let b=1;
+    let sum=0;
+    let day=0;
+    for(let i=0;i<20;i++){
+        sum = a+b;
+        a = b;
+        b = sum;
+        if(sum%5 == 0){
+            alert("Số đầu tiên trong dãy fibonacci chia hết cho 5 là: " +sum);
+            break;
+        }
+    }
+</script>
+</body>
+</html>

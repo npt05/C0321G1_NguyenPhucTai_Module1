@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dãy fibonacci</title>
+</head>
+<body>
+     <script>
+         let a=0;
+         let b=1;
+         let sum=0;
+         let day=0;
+         document.write("20 số đàu tiên trong dãy finbonaccia là: ");
+         document.write(a);
+         document.write(" ");
+         document.write(b);
+         for(let i=0;i<18;i++){
+          sum = a+b;
+          a = b;
+          b = sum;
+          document.write(sum);
+          document.write(" ");
+         }
+     </script>
+</body>
+</html>
