@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .body{
+            margin-left: 700px;
+        }
+        .button{
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body class="body">
+     <button class="button" type="button" onclick="choi()">Chơi</button>
+     <script>
+         function choi(){
+             let a=parseInt(prompt("Nhập vào 1 khoảng từ:"));
+             let b=parseInt(prompt("Đến:"));
+             if(a < b) {
+                 let c = parseInt(Math.floor(Math.random() * (b - a) + a));
+                 console.log(c);
+                 while (1 > 0){
+                     let d=parseInt(prompt("Nhập vào số bạn đoán."));
+                     if(c == d){
+                         alert("Bạn thắng");
+                         break;
+                     }else if(d<c){
+                         alert("Số bạn nhập nhỏ hơn.");
+                     }else {
+                         alert("Số bạn nhập lớp hơn.");
+                     }
+                 }
+             }else {alert("Nhập lại.");
+             }
+         }
+     </script>
+</body>
+</html>
