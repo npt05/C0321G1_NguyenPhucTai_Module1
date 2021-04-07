@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+     <script>
+         let num = window.prompt("Nhập vào một số: ");
+         let mang = num.toString();
+         let dem = [mang[0]];
+         for (let i=1; i<mang.length; i++)
+         {
+             if(mang[i-1]%2 === 0)
+             {
+                 dem.push(" - ",mang[i]);
+             }else
+             {
+                 dem.push(mang[i]);
+                }
+         }
+         alert(dem.join(""));
+     </script>
+</body>
+</html>

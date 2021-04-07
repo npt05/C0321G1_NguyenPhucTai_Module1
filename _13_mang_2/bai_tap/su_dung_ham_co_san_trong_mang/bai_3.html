@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+      <script>
+          let array1 = prompt("Enter one word:");
+          let chuhoa = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+          let chuthuong = 'abcdefghijklmnopqrstuvwxyz';
+          let dem = [];
+          for (let i=0;i<array1.length;i++){
+              if(chuhoa.indexOf(array1[i]) !== -1) {
+                  dem.push(array1[i].toLowerCase());
+              }else if(chuthuong.indexOf(array1[i]) !==-1){
+                  dem.push(array1[i].toUpperCase());
+              }else {
+                  dem.push(array1[i]);
+              }
+          }
+          alert(dem.join(''))
+      </script>
+</body>
+</html>
