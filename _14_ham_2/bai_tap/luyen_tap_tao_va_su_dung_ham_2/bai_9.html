@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+     <script>
+           function kiemTraKiTu(x) {
+               let dem=0;
+               let a = ['a','b','c','d','a','a','b','r','e','t','r','u','i','-'];
+               for(let i=0; i<a.length; i++){
+                   if(x === a[i]){
+                       dem++;
+                   }
+               }
+               if(dem!==0) {
+                   return dem;
+               }
+               return -1;
+           }
+           let kiTu= prompt("Nhập vào kí tự bất kì: ");
+           alert(kiemTraKiTu(kiTu));
+     </script>
+</body>
+</html>

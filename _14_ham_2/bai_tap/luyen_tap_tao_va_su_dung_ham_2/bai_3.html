@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+     <script>
+         function tinhGiaiThua(x) {
+             if(x==2){
+                 return 2;
+             }
+             return x*tinhGiaiThua(x-1);
+         }
+         let a = parseInt(prompt("Nhập vào 1 số nguyên: "));
+         alert(a+ "!=" +tinhGiaiThua(a));
+     </script>
+</body>
+</html>
