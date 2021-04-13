@@ -7,17 +7,17 @@
 <body>
     <script>
          let enter = prompt("Enter one word:");
-         let E = ['hello','good','nice','bye'];
-         let VN = ['Xin chào','tốt','tuyệt vời','tạm biệt'];
-         for (let i=0;i<E.length;i++){
-              if(enter === E[i]){
-                  alert(VN[i]);
-                  break;
-              }else {
-                  alert("No data");
+         let e = ['hello','good','nice','bye'];
+         let dem = 0;
+         let vn  = ['Xin chào','tốt','tuyệt vời','tạm biệt'];
+         for (let i=0;i<e.length;i++){
+              if(enter === e[i]){
+                  alert(vn[i]);
+                  dem = 1;
                   break;
               }
          }
+         if(dem == 0) alert("No data");
     </script>
 </body>
 </html>
