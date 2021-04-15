@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+       <h3>Add New Product</h3>
+       <input type="text" id="newProduct">
+       <button onclick="addNewProduct(); displayProduct()" on>Add</button>
+       <h3>Display all Product</h3>
+       <p>Product name <span id="numberProduct" style="margin-left: 50px"></span></p>
+       <p id="product"></p>
+       <script>
+         let arr1 = ['Samsung', 'Iphone', 'Xiaomi'];
+
+         function addNewProduct() {
+         let newProduct = document.getElementById('newProduct').value;
+         if (newProduct == '') {
+           return arr1;
+         }
+           arr1.push(newProduct);
+          alert('Đã thêm vào sản phẩm: ' + newProduct)
+         }
+
+          function displayProduct() {
+           let table = '<table border="1px" style="border-collapse: collapse">'
+           let i = 0;
+           for (; i < arr1.length; i++) {
+             table += ' <tr><td style="width: 100px">' + arr1[i] + '</td>';
+             table += '<td>' + '<button onclick ="editProduct(this.id);displayProduct()"' + 'id="' + i + '"">edit</button>' + '</td>';
+             table += '<td>' + '<button onclick ="removeProduct(this.id);displayProduct()"' + 'id="' + i + '"">remove</button>' + '</td>';
+           }
+          table += '</table>'
+          document.getElementById('product').innerHTML = table;
+          document.getElementById('numberProduct').innerText = i + ' Product';
+          }
+
+         function editProduct(i) {
+         let editName = prompt('Bạn muốn sửa tên sản phẩm thành: ');
+         arr1[i] = editName;
+         }
+
+        function removeProduct(i) {
+         arr1.splice(i, 1);
+       }
+      </script>
+</body>
+</html>
