@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+      <canvas id="myCanvas" width="500px" height="400px" style="border:1px solid black;"></canvas>
+      <script>
+        class Rectangle {
+          constructor(width, height) {
+            this.chuvi = 2 * (width + height);
+            this.dientich=width * height;
+            this.width = width;
+            this.height = height;
+          }
+          setRectangle(width, height) {
+            this.width = width;
+            this.height = height;
+          }
+          getCircum() {
+            return this.chuvi;
+          }
+          getArea() {
+            return this.dientich;
+          }
+        }
+        Rectangle.prototype.display = function (){
+            let canvas = document.getElementById("myCanvas");
+            let ctx = canvas.getContext("2d");
+            ctx.rect(20, 20, this.width, this.height);
+            ctx.stroke();
+        }
+       let rec = new Rectangle(200,80);
+       rec.display();
+       document.write("<br> Diện tích: " +rec.getCircum()+ "<br>");
+       document.write(" Chu vi: " +rec.getArea())
+      </script>
+</body>
+</html>

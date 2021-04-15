@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+   <script>
+     class Temperature{
+       constructor(c) {
+         this.tempC = c;
+         this.convertCtoF = (this.tempC*1.8)+32;
+         this.convertCtoK = this.tempC + 273;
+       }
+       getCtoF(){
+         return this.convertCtoF;
+       }
+       getCtoK(){
+         return this.convertCtoK;
+       }
+     }
+     let temp = new Temperature(25);
+     document.write(temp.tempC+ " độ C bằng " +temp.getCtoF()+ " độ F <br>");
+     document.write(temp.tempC+ " độ C bằng " +temp.getCtoK()+ " độ K");
+</script>
+</body>
+</html>
