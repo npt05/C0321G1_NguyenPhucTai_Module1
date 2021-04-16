@@ -7,7 +7,6 @@
 <body>
    <div id="game"></div>
    <script>
-
        class Hero{
            constructor(image, top, left, width, height) {
 
@@ -17,6 +16,7 @@
                this.width = width;
                this.height = height;
            }
+
            getHeroElement (){
                return '<img width="'+ this.width + '"' +
                    ' height="'+ this.height+ '"' +
@@ -38,13 +38,14 @@
                this.top += 5;
                console.log('ok:' + this.top);
            }
+
            moveUp(){
                this.top -= 5;
                console.log('ok:' + this.top);
            }
        }
 
-       let  hero = new Hero('nobita.png', 0, 0, 400,300 );
+       let  hero = new Hero('venom.jpg', 0, 0, 400,300 );
        function start() {
            if ( hero.left < (window.innerWidth - hero.width) && hero.top === 0 ) {
                hero.moveRight()
