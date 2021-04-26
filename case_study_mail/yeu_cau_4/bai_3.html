@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+      let ar1 = prompt("Nhập vào chuỗi 1:").split('');
+      let ar2 = prompt("Nhập  vào chuỗi 2:").split('');
+      let ar3 = [];
+      for(let i =0; i<ar1.length; i++){
+        let n = "";
+        for(let j=0; j<ar2.length; j++){
+          if(ar1[i]==ar2[j]){
+            ar2.splice(j,1);
+            n = ar1[i];
+            ar3.push(n);
+            continue;
+          }
+        }
+      }
+      alert("Số kí tự chung của 2 chuỗi là: "+ar3.length);
+    </script>
+</body>
+</html>

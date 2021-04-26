@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        input{
+            border-radius: 5px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<h2>Hệ thống xổ số CodeGym</h2>
+<div>
+    <div>
+        <p id="result"></p>
+    </div>
+    <button onclick="menu()">Mua vé số</button>
+    <button onclick="displayResult()">Xem kết quả</button>
+</div>
+<script>
+    class Lottery {
+        constructor(number1, number2, number3, number4, number5, number6, grade = "") {
+            this.number1 = number1;
+            this.number2 = number2;
+            this.number3 = number3;
+            this.number4 = number4;
+            this.number5 = number5;
+            this.number6 = number6;
+            this.grade = grade;
+        }
+
+        setNumber1(num1) {
+            this.number1 = num1;
+        }
+
+        getNumber1() {
+            return this.number1;
+        }
+
+        setNumber2(num2) {
+            this.number2 = num2;
+        }
+
+        getNumber2() {
+            return this.number2;
+        }
+
+        setNumber3(num3) {
+            this.number3 = num3;
+        }
+
+        getNumber3() {
+            return this.number3;
+        }
+
+        setNumber4(num4) {
+            this.number4 = num4;
+        }
+
+        getNumber4() {
+            return this.number4;
+        }
+
+        setNumber5(num5) {
+            this.number5 = num5;
+        }
+
+        getNumber5() {
+            return this.number5;
+        }
+
+        setNumber6(num6) {
+            this.number6 = num6;
+        }
+
+        getNumber6() {
+            return this.number6;
+        }
+
+        setGrade(grade) {
+            this.grade = grade;
+        }
+
+        getGrade() {
+            return this.grade;
+        }
+
+        getNumber() {
+            return [this.number1, this.number2, this.number3, this.number4, this.number5, this.number6];
+        }
+
+        getRandomNumber() {
+            this.setNumber1(Math.floor(Math.random() * 100));
+            this.setNumber2(Math.floor(Math.random() * 100));
+            this.setNumber3(Math.floor(Math.random() * 100));
+            this.setNumber4(Math.floor(Math.random() * 100));
+            this.setNumber5(Math.floor(Math.random() * 100));
+            this.setNumber6(Math.floor(Math.random() * 100));
+        }
+
+        getInfo() {
+            return "Vé số " + this.getNumber().join(" ") + this.grade;
+        }
+    }
+
+    let arrlottery = [];
+
+    function menu() {
+        let choose;
+        if (arrlottery.length < 4) {
+            choose = parseInt(prompt("Bạn có 2 sự lựa chọn \n" +
+                "1.Bạn tự chọn số. \n" +
+                "2.Hệ thóng random giúp bạn."));
+            if (choose === 1) {
+                inputLottey();
+            } else if (choose === 2) {
+                randomLottery();
+            }
+        } else {
+            alert("Bạn chỉ được mua 4 vé số.")
+        }
+
+    }
+
+    function drawLottery(arr) {
+        let str = "";
+        for (let i = 0; i < arr.length; i++) {
+            str += "<input value='" + arr[i].getNumber1() + "'>" +
+                "<input value='" + arr[i].getNumber2() + "'>" +
+                "<input value='" + arr[i].getNumber3() + "'>" +
+                "<input value='" + arr[i].getNumber4() + "'>" +
+                "<input value='" + arr[i].getNumber5() + "'>" +
+                "<input value='" + arr[i].getNumber6() + "'>" + "<br>"
+        }
+        document.getElementById("result").innerHTML = str;
+    }
+
+    function randomLottery() {
+        let lottery = new Lottery();
+        lottery.getRandomNumber();
+        arrlottery.push(lottery);
+        drawLottery(arrlottery);
+    }
+
+    function inputLottey() {
+        let arrNum = [];
+        for (let i = 0; i < 6; i++) {
+            arrNum[i] = parseInt(prompt("Nhập vào số thứ " + (i + 1) + " của vé số"));
+        }
+        let lottery = new Lottery(arrNum[0], arrNum[1], arrNum[2], arrNum[3], arrNum[4], arrNum[5]);
+        arrlottery.push(lottery);
+        drawLottery(arrlottery);
+    }
+
+    function cheekResult(lottery) {
+        let count = 0;
+        let arr = [13, 44, 95, 84, 74, 29, 53];
+        for (let i = arr.length - 1; i >= 0; i--) {
+            if (arr[i] === lottery.getNumber()[i]) {
+                count++;
+            } else break;
+        }
+        switch (count) {
+            case 6:
+                lottery.getGrade(1);
+                break;
+            case 5:
+                lottery.getGrade(2);
+                break;
+            case 4:
+            case 3:
+                lottery.getGrade(3);
+                break;
+            default:
+                lottery.getGrade(4);
+        }
+    }
+
+    function displayResult() {
+        let result = "";
+        for (let i = 0; i < arrlottery.length; i++) {
+            cheekResult(arrlottery[i]);
+            switch (arrlottery[i].getGrade()) {
+                case 1:
+                    result += "giải nhất";
+                    break;
+                case 2:
+                    result += "giải nhì";
+                    break;
+                case 3:
+                    result += "giải khuyến khích";
+                    break;
+            }
+        }
+        if (result === "") {
+            alert("Chúc bạn may mắn lần sau.")
+        } else {
+            alert("Chúc mừng bạn đã trúng  " + result)
+        }
+    }
+</script>
+</body>
+</html>

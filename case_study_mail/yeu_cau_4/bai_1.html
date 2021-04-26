@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+ <script>
+     let str = prompt("Nhập chuỗi cần chuẩn hoá:");
+     function chuanHoa(string){
+         let split = string.replace(/\+/g, '').toLowerCase().split(' ');
+         let result= '';
+         for(let i =0; i<split.length; i++){
+             result+= capitalizeFistLetter(split[i]) +' ';
+         }
+         result=result.trim();
+         return result;
+     }
+     function capitalizeFistLetter(string){
+         return string.charAt(0).toUpperCase() +string.slice(1)
+     }
+     document.write("Chuỗi truóc khi chuẩn hoá: " +str+ "<br>");
+     document.write("Chuỗi sau khi chuẩn hoá: " +chuanHoa(str));
+ </script>
+</body>
+</html>

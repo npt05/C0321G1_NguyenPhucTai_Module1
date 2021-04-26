@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+     <script>
+       let so = (prompt("Nhập vào một số:"));
+       let chu = "";
+       for(i=0; i<so.length; i++) {
+         switch (so[i]) {
+           case '1': chu += "một";
+           break;
+           case '2': chu += " hai";
+             break;
+           case '3': chu += " ba";
+             break;
+           case '4': chu += " bốn";
+             break;
+           case '5': chu += " năm";
+             break;
+           case '6': chu += " sáu";
+             break;
+           case '7': chu += " bảy";
+             break;
+           case '8': chu += " tám";
+             break;
+           case '9': chu += " chín";
+             break;
+           case '0': chu += " không";
+             break;
+         }
+       }
+       alert(chu);
+     </script>
+</body>
+</html>

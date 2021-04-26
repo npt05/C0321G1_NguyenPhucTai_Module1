@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let m, n;
+    let max = 0;
+    let min = 10;
+    let arr = [];
+    do {
+        m = parseInt(prompt("Nhập số hàng mảng hai chiều"));
+        n = parseInt(prompt("Nhập số cột mảng hai chiều"));
+    } while (m <= 0 || n <= 0 || isNaN(m) || isNaN(n));
+    let dem = 0;
+    for (let i = 0; i < m; i++) {
+        arr[i] = [];
+        for (let j = 0; j < n; j++) {
+            arr[i][j] = Math.floor(Math.random() * 10);
+            maxArr(arr[i][j]);
+        }
+    }
+    function maxArr(array){
+        if(array>max){
+            max = array;
+        }
+        if(array<min){
+            min = array;
+        }
+    }
+    console.log(arr);
+    alert("Giá trị lớn nhất trong mảng là: "+max);
+    alert("Giá trị nhỏ nhất trong mảng là: "+min);
+</script>
+</body>
+</html>

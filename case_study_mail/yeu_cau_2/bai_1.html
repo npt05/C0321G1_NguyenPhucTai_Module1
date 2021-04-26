@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+      let luong = parseInt(prompt("Nhập lương của bạn (triệu đồng):"));
+      let thue =0;
+      if(luong >= 15){
+        thue = luong/5;
+        alert("Bạn phải nộp 20% thuế thu nhập cá nhân là " +thue+ " triệu đồng");
+      }else if(luong>=7){
+        thue = luong/10;
+        alert("Bạn phải nộp 10% thuế thu nhập cá nhân là " +thue+ " triệu đồng");
+      }else {
+        thue = luong/20;
+        alert("Bạn phải nộp 5% thuế thu nhập cá nhân là " +thue+ " triệu đồng");
+      }
+    </script>
+</body>
+</html>

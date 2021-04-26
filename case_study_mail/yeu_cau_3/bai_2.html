@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = [1, 2, 3, 4, 5, 6];
+    let b = [1, 10, 5, 8, 9, 7];
+    let c = [];
+    for (let i = 0; i < b.length; i++) {
+        let n = 0;
+        let k = 0;
+        for ( let j = 0; j < a.length; j++) {
+            if (b[i] === a[j]) {
+                continue;
+            } else {
+             k++;
+            }
+        }
+        if (k===a.length) {
+            n = b[i];
+        }
+        if (n !== 0) {
+            c.push(n);
+        }
+    }
+    alert(c);
+</script>
+</body>
+</html>

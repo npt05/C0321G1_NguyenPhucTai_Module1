@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let m, n;
+    let arr = [];
+    do {
+        m = parseInt(prompt("Nhập số cột mảng hai chiều"));
+        n = parseInt(prompt("Nhập số hàng mảng hai chiều"));
+    } while (m <= 0 || n <= 0 || isNaN(m) || isNaN(n));
+    let sum = 0;
+    for (let i = 0; i < m; i++) {
+        arr[i] = [];
+        for (let j = 0; j < n; j++) {
+            arr[i][j] = Math.floor(Math.random() * 10);
+            if (arr[i][j] % 2 == 0) {
+                sum += arr[i][j];
+            }
+        }
+    }
+    alert("Tổng các phần tử chẵn trong ma trận " +n+ " hàng "+m+" cột là "+ sum);
+</script>
+</body>
+</html>

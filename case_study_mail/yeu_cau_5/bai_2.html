@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let m, n;
+    let arr = [];
+    let a = [];
+    do {
+        m = parseInt(prompt("Nhập số cột mảng hai chiều"));
+        n = parseInt(prompt("Nhập số hàng mảng hai chiều"));
+    } while (m <= 0 || n <= 0 || isNaN(m) || isNaN(n));
+    let dem = 0;
+    for (let i = 0; i < m; i++) {
+        arr[i] = [];
+        for (let j = 0; j < n; j++) {
+            arr[i][j] = Math.floor(Math.random() * 10);
+            if (kiem_tra_snt(arr[i][j])) {
+                a.push(arr[i][j]);
+                dem++;
+            }
+        }
+    }
+
+    function kiem_tra_snt(n) {
+        if (n < 2) {
+            return false;
+        }
+        for (i = 2; i <= Math.sqrt(n); i++) {
+            if (n % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    document.write("Mảng : " + arr + "<br>");
+    document.write("Mảng có " + dem + " số nguyên tố là " +a);
+</script>
+</body>
+</html>
